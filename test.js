@@ -1,3 +1,16 @@
-let obj = null;
-console.log(obj[prop]);
-// console.log(obj.prop);
+
+let x = 10;
+
+function test() {
+    console.log(x);
+}
+
+test(); // Выведет 10
+x = 20;
+test(); // Выведет 20
+
+(function () {
+    x = 30;
+    let x = 40; // Изменено имя переменной, чтобы избежать конфликта имен
+    test(); // Выведет 30
+})(test); // Передаем саму функцию test, а не результат её вызова
