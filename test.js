@@ -1,4 +1,6 @@
-x = 12
-console.log(x);
-var x = 10;
-console.log(x);
+let test = {test: 1}
+func = () => {console.log(test)}
+func()
+test.test = 2
+func()
+
